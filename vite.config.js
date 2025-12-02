@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
@@ -17,4 +17,14 @@ export default defineConfig({
             },
         }),
     ],
+    server: {
+        host: "0.0.0.0",
+        // host: true,
+        port: 5173,
+        strictPort: true,
+        hmr: {
+            host: "localhost", // sau laravel.test
+            port: 5173,
+        },
+    },
 });
